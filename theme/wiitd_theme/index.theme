@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=wiitd_theme-dark-compact
+Comment=A Material Design theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=wiitd_theme-dark-compact
+MetacityTheme=wiitd_theme-dark-compact
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24
