@@ -6,5 +6,5 @@ My custom dotfiles for apps that I use
 >   Kitty Terminal  
 >   Firefox(theme)  
 >   GTK theme  
->   Icone theme  
+>   Icons theme  
 
