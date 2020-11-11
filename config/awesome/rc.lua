@@ -257,7 +257,7 @@ local myclock_tooltip = awful.tooltip {
     timer_function = function()
         return os.date("%A %d %B  %Y")
     end,
-    font = "Font Awesome 5 Free 12"
+    font = "Font Awesome 5 Free 10"
 }
 
 
@@ -295,6 +295,7 @@ local mytraywidget_tooltip = awful.tooltip {
     timer_function = function()
         return "Toggle tray"
     end,
+    font = "Font Awesome 5 Free 10",
 }
 
 add_clickable_effect(mytraywidget)
@@ -365,7 +366,7 @@ local mybatterywidget_tooltip = awful.tooltip {
     timer_function = function()
         return mybattery_info
     end,
-    font = "Font Awesome 5 Free 11",
+    font = "Font Awesome 5 Free 10",
 }
 
 -- Create a wibox for each screen and add it
@@ -442,7 +443,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
     s.mypromptbox.fg = beautiful.xcolor7
-    s.mypromptbox.font = "sans 11"
+    s.mypromptbox.font = "Font Awesome 5 Free 10"
 
     -- Create a searchbar widget
     search_icon = wibox.widget.textbox("")
@@ -505,6 +506,7 @@ awful.screen.connect_for_each_screen(function(s)
         timer_function = function()
             return "Left Click or Mod+R: <b>Run</b>\nRight click or Mod+S: <b>Web Search</b>\nEscape: <b>Cancel</b>"
         end,
+        font = "Font Awesome 5 Free 10",
     }
 
         -- Create a taglist widget
@@ -834,14 +836,7 @@ globalkeys = gears.table.join(
         function(c)
             awful.spawn("joplin-desktop")
         end,
-            {discription = "launch joplin", group = "wiitd_bind"}),
-
-    -- Coffee Gif
-    awful.key({modkey, "Mod1" }, "g",
-        function(c)
-            awful.spawn.with_shell("sxiv -a -b -p -q -g 125x125 -z 25 "..beautiful.gif)
-        end,
-            {discription = "launch coffee gif of the day", group = "wiitd_bind"})
+            {discription = "launch joplin", group = "wiitd_bind"})
 )
 
 -- ########## Client Key bindings ##########
@@ -1109,7 +1104,7 @@ awful.rules.rules = {
           "Gpick",
           "Kruler",
           "MessageWin",  -- kalarm.
-          "Sxiv",
+          -- "Sxiv",
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Wpa_gui",
           "veromix",

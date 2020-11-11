@@ -8,25 +8,23 @@ local gears = require("gears")
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 local wallpapers = {
-  "awesome_cliffs.jpg",
-  "awesome_coast.jpg",
-  "awesome_field.jpg",
-  "awesome_flower.jpg",
-  "awesome_forest.jpg",
-  "awesome_mountains.jpg",
-  "awesome_mountains2.jpg",
-  "awesome_mountains3.jpg",
-  "awesome_mountains5.jpg",
-  "awesome_mountains6.jpg",
-  "awesome_pathway.jpg",
-}
-
-local gifs = {
-  "gif_cat_coffee.gif",
-  "gif_cat_coffee2.gif",
-  "gif_coffee.gif",
-  "gif_coffee_cup.gif",
-  "gif_coffee_reflection.gif",
+    "awesome_aurora.jpg",
+    "awesome_aurora2.jpg",
+    "awesome_cliffs.jpg",
+    "awesome_coast.jpg",
+    "awesome_coast_city.jpg",
+    "awesome_field.jpg",
+    "awesome_field2.jpg",
+    "awesome_flower.jpg",
+    "awesome_forest.jpg",
+    "awesome_forest2.jpg",
+    "awesome_lake.jpg",
+    "awesome_mountains.jpg",
+    "awesome_mountains2.jpg",
+    "awesome_mountains3.jpg",
+    "awesome_mountains5.jpg",
+    "awesome_mountains6.jpg",
+    "awesome_pathway.jpg",
 }
 
 -- Inherit default theme
@@ -34,7 +32,6 @@ local theme = dofile(themes_path.."default/theme.lua")
 math.randomseed(os.time())
 
 theme.wallpaper = "~/.config/awesome/themes/wiitd_theme/wallpapers/"..wallpapers[math.random(1, #wallpapers)]
-theme.gif = "~/.config/awesome/themes/wiitd_theme/gifs/"..gifs[math.random(1, 5)]
 
 local color_scheme = "wiitd_clr_Void"
 
