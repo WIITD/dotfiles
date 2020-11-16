@@ -61,10 +61,6 @@ editor_cmd = "exo-open "
 web_search_cmd = "exo-open https://duckduckgo.com/?q="
 
 -- Default modkey.
--- Usually, Mod4 is the key with a logo between Control and Alt.
--- If you do not like this or do not have such a key,
--- I suggest you to remap Mod4 to another key using xmodmap or other tools.
--- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
@@ -144,9 +140,6 @@ end
 require("extras.exit_screen")
 
 -- ########## Notifications ##########
-
--- TODO: some options are not respected when the notification is created
--- through lib-notify. Naughty works as expected.
 
 -- Icon size
 naughty.config.defaults['icon_size'] = beautiful.notification_icon_size
@@ -239,9 +232,7 @@ myclockwidget = wibox.widget{
         },
         {
             clock_text,
-            -- Add padding to the right for aesthetic reasons
             right = dpi(4),
-            -- Add padding to the left for spacing between the clock icon and the clock text
             left = dpi(4),
             force_width = dpi(24),
             widget = wibox.container.margin
@@ -341,9 +332,7 @@ mybatterywidget = wibox.widget{
         },
         {
             battery_text,
-            -- Add padding to the right for aesthetic reasons
             right = dpi(4),
-            -- Add padding to the left for spacing between the battery icon and the battery text
             left = dpi(4),
             widget = wibox.container.margin
         },
@@ -601,7 +590,6 @@ awful.screen.connect_for_each_screen(function(s)
                 mytraywidget,
                 mybatterywidget,
                 myclockwidget,
-                -- s.mylayoutwidget,
             },
             
         },
@@ -810,12 +798,12 @@ globalkeys = gears.table.join(
 
     -- ########## WIITD KEY SETTINGS ##########
 
-    -- EMACS
+    -- Code Editor
     awful.key({modkey, "Mod1" }, "space",
         function(c)
-            awful.spawn("emacs")
+            awful.spawn("cudatext")
         end,
-        {discription = "launch emacs", group = "wiitd_bind"}),
+        {discription = "launch editor", group = "wiitd_bind"}),
 
     -- Package Manager
     awful.key({modkey, "Mod1" }, "m",
@@ -1104,7 +1092,6 @@ awful.rules.rules = {
           "Gpick",
           "Kruler",
           "MessageWin",  -- kalarm.
-          -- "Sxiv",
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Wpa_gui",
           "veromix",

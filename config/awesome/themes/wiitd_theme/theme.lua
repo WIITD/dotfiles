@@ -88,7 +88,7 @@ theme.fg_urgent     = theme.xbackground
 theme.fg_minimize   = theme.xcolor3
 
 theme.useless_gap   = dpi(2)
-theme.border_width  = dpi(0)
+theme.border_width  = dpi(1)
 theme.border_radius  = dpi(3)
 theme.border_normal = theme.xcolor0
 theme.border_focus  = theme.bg_focus
@@ -118,11 +118,6 @@ theme.tasklist_fg_normal = theme.xcolor1
 
 -- Titlebars
 theme.titlebar_size = dpi(0)
-
--- Tooltips
--- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
-theme.tooltip_fg = theme.fg_normal
-theme.tooltip_bg = theme.bg_normal
 
 -- Notifications
 theme.notification_position = "top_right"
