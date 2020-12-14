@@ -29,10 +29,10 @@ local reboot_command = function()
     awful.keygrabber.stop(exit_screen_grabber)
 end
 local suspend_command = function()
-    -- awful.spawn.with_shell("systemctl suspend")
-    exit_screen_hide()
-    awful.spawn.with_shell("i3lock-fancy")
     awful.spawn.with_shell("systemctl suspend")
+    exit_screen_hide()
+    -- awful.spawn.with_shell("i3lock-fancy")
+    --awful.spawn.with_shell("systemctl suspend")
 
 end
 local exit_command = function()

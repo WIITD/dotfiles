@@ -33,7 +33,6 @@ math.randomseed(os.time())
 
 theme.wallpaper = "~/.config/awesome/themes/wiitd_theme/wallpapers/"..wallpapers[math.random(1, #wallpapers)]
 
--- set wm theme
 local color_scheme = "wiitd_clr_Void"
 
 -- wiitd_clr_Void theme

@@ -199,15 +199,6 @@ myawesomemenu = {
    { "Quit", function() exit_screen_show() end },
 }
 
-mymainmenu = awful.menu({ items = { { "Awesome", myawesomemenu },
-                                    { "Web Browser", web_browser },
-                                    { "File Manager", file_manager },
-                                    { "Settings", "xfce4-settings-manager" },
-                                    { "Run", "rofi_run -r" },
-                                    { "Terminal", terminal }
-                                  }
-                        })
-
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 
@@ -604,11 +595,9 @@ end)
 -- ########## Mouse bindings ##########
 
 root.buttons(gears.table.join(
-    awful.button({ }, 1, function () mymainmenu:hide() end),
-    awful.button({ }, 2, function () awful.spawn.with_shell("rofi_run -w") end),
-    awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewprev),
-    awful.button({ }, 5, awful.tag.viewnext)
+    awful.button({ }, 1, function () awful.spawn.with_shell("rofi_run -w") end),
+    awful.button({ }, 2, awful.tag.viewprev),
+    awful.button({ }, 3, awful.tag.viewnext)
 ))
 
 -- ########## Global Key bindings ##########
@@ -657,11 +646,7 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-
-    -- Main menu
-    awful.key({ modkey, "Shift"  }, "w", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
-
+    
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
